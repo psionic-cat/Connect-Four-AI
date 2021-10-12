@@ -196,17 +196,5 @@ class TreeNode:
 		return False
 
 
-#tree = Tree(TreeNode([["-", "-", "-", "-", "-", "-", "-"], ["-", "-", "-", "-", "-", "-", "-"], ["-", "-", "-", "-", "-", "-", "-"], ["-", "-", "-", "-", "-", "-", "-"], [O, X, O, X, O, X, O], [X, O, X, O, X, O, X]]))
-
 tree = Tree(TreeNode(), 5)
 tree.playGame()
-
-
-"""
--------
------O-
----X-O-
----OXX-
----XXXO
----XOOO
-"""
