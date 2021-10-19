@@ -48,7 +48,7 @@ class Tree:
 		if column not in [i[1] for i in node.openSpots()]:
 			print("\nThat column is already filled or doesn't exist. Please enter a new column."); time.sleep(1.55)
 			node = self.playerTurn(node)
-		# Finding which of the nodes neighbors is the correct next move
+		# Finding which of the node's neighbors is the correct next move
 		else:
 			for i in node.openSpots():
 				if i[1] == column:
@@ -118,6 +118,7 @@ class TreeNode:
 		if self.turn == X:
 			bestChild = self.neighbors[0]
 			for i in self.neighbors:
+				# Adding a bit of randomness to decide if it will be greater than or if it will be greater than or equal to
 				r = random.randint(0, 1)
 				if r == 0:
 					if i.score > bestChild.score:
@@ -128,6 +129,7 @@ class TreeNode:
 		else:
 			bestChild = self.neighbors[0]
 			for i in self.neighbors:
+				# Adding a bit of randomness to decide if it will be less than or if it will be less than or equal to
 				r = random.randint(0, 1)
 				if r == 0:
 					if i.score < bestChild.score:
