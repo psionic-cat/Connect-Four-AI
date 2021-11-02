@@ -196,7 +196,3 @@ class TreeNode:
 							return True
 		# If there wasn't a win, return False
 		return False
-
-
-tree = Tree(TreeNode(), 5)
-tree.playGame()
